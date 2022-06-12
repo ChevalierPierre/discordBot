@@ -6,9 +6,11 @@ const { Intents } = require('discord.js')
 const client = new Discord.Client({ partials: ['MESSAGE'], intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] })
 client.login(process.env.BOT_TOKEN)
 
-cron.schedule("* * * * * *", function() {
-  Client.users.get("329642548304019457").send("...")
-})
+//cron.schedule("* * * * * *", function() {
+//  client.users.fetch('174591557750620160').then(dm => {
+//    dm.send('Message to send')
+//  })
+//})
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`)
